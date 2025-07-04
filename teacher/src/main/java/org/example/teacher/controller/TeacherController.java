@@ -2,6 +2,7 @@ package org.example.teacher.controller;
 
 import jakarta.validation.Valid;
 
+import org.example.teacher.dto.TeacherReceiveDto;
 import org.example.teacher.dto.TeacherResponseDto;
 import org.example.teacher.service.TeacherService;
 import org.springframework.http.HttpStatus;
@@ -33,7 +34,7 @@ public class TeacherController {
 
 
     @PostMapping
-    public ResponseEntity<teacherResponseDto> create (@Valid @RequestBody TeacherReceiveDto teacherReceiveDto){
+    public ResponseEntity<TeacherResponseDto> create (@Valid @RequestBody TeacherReceiveDto teacherReceiveDto){
         return ResponseEntity.status(HttpStatus.CREATED).body(service.create(teacherReceiveDto));
     }
 
