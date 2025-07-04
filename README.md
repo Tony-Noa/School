@@ -9,11 +9,11 @@ Ce projet est une application scolaire basée sur une architecture microservices
 
 ```plaintext
 school/
-├── teacher/      # Microservice de gestion des enseignants
-├── student/      # Microservice de gestion des élèves
-├── school-class/        # Microservice de gestion des classes
-├── gateway/      # API Gateway
-├── eureka-server/    # Service Eureka
+├── teacher/        # Microservice de gestion des enseignants
+├── student/        # Microservice de gestion des élèves
+├── school-class/   # Microservice de gestion des classes
+├── gateway/        # API Gateway
+├── eureka-server/  # Service Eureka
 └── ...
 ```
 
