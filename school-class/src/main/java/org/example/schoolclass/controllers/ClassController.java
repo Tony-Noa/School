@@ -23,7 +23,7 @@ public class ClassController {
         this.classService = classService;
     }
 
-    @GetMapping
+    @GetMapping("/")
     public ResponseEntity<List<ClassResponseDto>> get() {
         return ResponseEntity.ok(classService.get());
     }
@@ -33,7 +33,7 @@ public class ClassController {
         return ResponseEntity.ok(classService.get(id));
     }
 
-    @PostMapping
+    @PostMapping("/")
     public ResponseEntity<ClassResponseDto> create(@RequestBody ClassReceiveDto classReceiveDto) {
         return ResponseEntity.status(HttpStatus.CREATED).body(classService.createClass(classReceiveDto));
     }

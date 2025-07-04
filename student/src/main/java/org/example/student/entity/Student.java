@@ -29,6 +29,7 @@ public class Student {
                 .id(getId())
                 .last_name(getLast_name())
                 .first_name(getFirst_name())
+                .birthdate(getBirthdate())
                 .build();
 
     }

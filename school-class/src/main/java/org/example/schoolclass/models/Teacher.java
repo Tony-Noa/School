@@ -14,7 +14,7 @@ import java.util.UUID;
 @SuperBuilder
 public class Teacher {
     private UUID id;
-    private String firstName;
-    private String lastName;
-    private LocalDate birthDate;
+    private String first_name;
+    private String last_name;
+    private LocalDate birthdate;
 }

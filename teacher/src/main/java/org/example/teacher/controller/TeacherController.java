@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("api/teacher")
+@RequestMapping("")
 public class TeacherController {
 
     private TeacherService service;
@@ -22,7 +22,7 @@ public class TeacherController {
         this.service = service;
     }
 
-    @GetMapping
+    @GetMapping("/")
     public ResponseEntity<List<TeacherResponseDto>> getAll(){
         return ResponseEntity.ok(service.get());
     }
@@ -33,7 +33,7 @@ public class TeacherController {
     }
 
 
-    @PostMapping
+    @PostMapping("/")
     public ResponseEntity<TeacherResponseDto> create (@Valid @RequestBody TeacherReceiveDto teacherReceiveDto){
         return ResponseEntity.status(HttpStatus.CREATED).body(service.create(teacherReceiveDto));
     }

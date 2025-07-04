@@ -20,7 +20,7 @@ public class StudentController {
         this.service = service;
     }
 
-    @GetMapping
+    @GetMapping("/")
     public ResponseEntity<List<StudentResponseDto>> getAll(){
         return ResponseEntity.ok(service.get());
     }
@@ -31,7 +31,7 @@ public class StudentController {
     }
 
 
-    @PostMapping
+    @PostMapping("/")
     public ResponseEntity<StudentResponseDto> create (@Valid @RequestBody StudentReceiveDto studentReceiveDto){
         return ResponseEntity.status(HttpStatus.CREATED).body(service.create(studentReceiveDto));
     }

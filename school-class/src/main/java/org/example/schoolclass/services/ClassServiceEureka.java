@@ -28,8 +28,8 @@ public class ClassServiceEureka implements ClassService {
         this.restTemplate = restTemplate;
         this.repository = repository;
 
-        studentRestClient =  new RestClient<>("http://STUDENT/student/",this.restTemplate);
-        teacherRestClient =  new RestClient<>("http://TEACHER/teacher/",this.restTemplate);
+        studentRestClient =  new RestClient<>("http://STUDENT/",this.restTemplate);
+        teacherRestClient =  new RestClient<>("http://TEACHER/",this.restTemplate);
     }
 
     public List<ClassResponseDto> get() {
