@@ -88,6 +88,12 @@ Chaque microservice expose une API REST standard :
 
 ---
 
+## Axe d'amélioration 
+- Finir le service Matière (Subject)
+- Réaliser le service Note (Note)
+
+---
+
 ## 🧑‍💻 Auteurs
 
 Développé par :
