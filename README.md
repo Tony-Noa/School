@@ -34,9 +34,9 @@ git clone https://github.com/Tony-Noa/School.git
 cd School
 ```
 
-> Veuillez démarrer tous les services via votre IDE (ex:Intellij IDEA).
-> Assurez-vous que tous les services soit connecté à la base de données dans le `application.properties`.
-> Assurez-vous que tous les services ont leur propre port défini dans `application.properties`.
+- Veuillez démarrer tous les services via votre IDE (ex:Intellij IDEA).
+- Assurez-vous que tous les services soit connecté à la base de données dans le `application.properties`.
+- Assurez-vous que tous les services ont leur propre port défini dans `application.properties`.
 
 ---
 
