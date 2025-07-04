@@ -1,4 +1,4 @@
-/*package org.example.student.exception;
+/*package org.example.teacher.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

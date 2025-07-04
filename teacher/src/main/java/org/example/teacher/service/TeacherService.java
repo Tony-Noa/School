@@ -1,6 +1,11 @@
 package org.example.teacher.service;
 
 
+import org.example.teacher.dto.TeacherReceiveDto;
+import org.example.teacher.dto.TeacherResponseDto;
+import org.example.teacher.entity.Teacher;
+import org.example.teacher.exception.NotFoundException;
+import org.example.teacher.repository.TeacherRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,25 +16,25 @@ public class TeacherService {
 
     private final TeacherRepository teacherRepository;
 
-    public TeacherService(teacherRepository teacherRepository){
+    public TeacherService(TeacherRepository teacherRepository){
         this.teacherRepository = teacherRepository;
     }
 
-    public teacherResponseDto create (teacherReceiveDto teacherReceiveDto){
+    public TeacherResponseDto create (TeacherReceiveDto teacherReceiveDto){
         return teacherRepository.save(teacherReceiveDto.dtoToEntity()).entityToDto();
     }
 
-    public teacherResponseDto get(UUID id){
+    public TeacherResponseDto get(UUID id){
         return teacherRepository.findById(id).orElseThrow(NotFoundException::new).entityToDto();
     }
 
-    public List<teacherResponseDto> get(){
-        return teacherRepository.findAll().stream().map(teacher::entityToDto).toList();
+    public List<TeacherResponseDto> get(){
+        return teacherRepository.findAll().stream().map(Teacher::entityToDto).toList();
     }
 
-    public teacherResponseDto update(UUID id, teacherReceiveDto teacherReceiveDto){
-        teacher teacherFound = teacherRepository.findById(id).orElseThrow(NotFoundException::new);
-        teacher teacherGet = teacherReceiveDto.dtoToEntity();
+    public TeacherResponseDto update(UUID id, TeacherReceiveDto teacherReceiveDto){
+        Teacher teacherFound = teacherRepository.findById(id).orElseThrow(NotFoundException::new);
+        Teacher teacherGet = teacherReceiveDto.dtoToEntity();
         teacherFound.setLast_name(teacherGet.getLast_name());
         teacherFound.setFirst_name(teacherGet.getFirst_name());
         teacherFound.setBirthdate(teacherGet.getBirthdate());

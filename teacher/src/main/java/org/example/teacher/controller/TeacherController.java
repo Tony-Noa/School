@@ -2,6 +2,8 @@ package org.example.teacher.controller;
 
 import jakarta.validation.Valid;
 
+import org.example.teacher.dto.TeacherResponseDto;
+import org.example.teacher.service.TeacherService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
