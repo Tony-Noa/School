@@ -4,6 +4,7 @@ import jakarta.validation.Valid;
 import org.example.subject.dto.SubjectReceiveDto;
 import org.example.subject.dto.SubjectResponseDto;
 import org.example.subject.service.SubjectService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +14,7 @@ import java.util.UUID;
 
 @RestController
 public class SubjectController {
-
+    @Autowired
     private SubjectService service;
 
     public SubjectController(SubjectService service){
